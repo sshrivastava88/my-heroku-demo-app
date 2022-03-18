@@ -6,12 +6,12 @@ const host = "0.0.0.0";
 
 const app = express();
 
-const distDir = path.join(__dirname, "dist", "myherokudemoapp");
+const distDir = path.join(__dirname, "dist", "my-heroku-demo-app");
 
 app.use(express.static(distDir));
 
 app.get("/*", (req, res) => {
-  res.sendFile(__dirname, "dist", "myherokudemoapp", "index.html");
+  res.sendFile(__dirname, "dist", "my-heroku-demo-app", "index.html");
 });
 
 app.listen(port, () => {
